@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"],
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/layout.jsx",
+    "app/page.jsx",
+    "schema/index.jsx",
+    "types/index.jsx"
+, "components/layout/particle.jsx", "components/contact/contact-form.jsx", "components/featured-projects/featured-card.jsx", "components/featured-projects/featured-carousel.jsx", "components/featured-projects/featured-dialog.jsx", "components/helper/button-link.jsx", "components/layout/banner.jsx", "components/layout/contact-us.jsx", "components/layout/faq.jsx", "components/layout/featured-projects.jsx", "components/layout/footer.jsx", "components/layout/header.jsx", "components/layout/social-icons.jsx", "components/layout/tech-stack.jsx", "components/layout/typed-banner.jsx", "hooks/use-toast.js", "lib/utils.js", "components/ui/accordion.jsx", "components/ui/button.jsx", "components/ui/card.jsx", "components/ui/carousel.jsx", "components/ui/dialog.jsx", "components/ui/form.jsx", "components/ui/input.jsx", "components/ui/label.jsx", "components/ui/separator.jsx", "components/ui/textarea.jsx", "components/ui/toast.jsx", "components/ui/toaster.jsx"  ],
+  "exclude": ["node_modules"]
+}
