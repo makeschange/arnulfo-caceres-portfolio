@@ -1,9 +1,9 @@
-
 import { Bebas_Neue, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import ParticlesLayout from "@/components/layout/particle";
 import { Toaster } from "@/components/ui/toaster";
+import CustomCursor from "@/components/helper/custom-cursor";
 
 const bebas_neue = Bebas_Neue({
   subsets: ["latin"],
@@ -30,8 +30,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebas_neue.variable} ${poppins.variable} bg-gradient-to-r from-black via-emerald-950 to-black bg-no-repeat bg-cover w-full`}
+        className={`${bebas_neue.variable} ${poppins.variable} bg-gradient-to-r from-black via-emerald-950 to-black bg-no-repeat bg-cover w-full `}
       >
+        <CustomCursor />
         <ParticlesLayout />
         <Header />
         {children}

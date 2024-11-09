@@ -9,36 +9,51 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="bg-bg-net bg-[center_bottom_-3rem] w-full h-full bg-cover px-2 pt-24 pb-8 border-dotted border-t border-t-emerald-800"
+      className="bg-bg-net bg-[center_bottom_-3rem] w-full h-full bg-cover px-4 pt-24 pb-8 border-dotted border-t border-t-emerald-800"
     >
       <div className="wrapper">
-        <h2 className="text-stroke-green relative text-center text-9xl font-bebas_neue text-black tracking-widest">
+        <h2
+          data-aos="zoom-in"
+          className="text-stroke-green relative text-center text-7xl sm:text-8xl md:text-9xl font-bebas_neue text-black tracking-widest"
+        >
           Get in Touch
-          <span className="font-poppins text-stroke-black font-bold uppercase no-text-stroke absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-4xl z-20 tracking-normal text-emerald-500">
+          <span className="w-full font-poppins text-stroke-black font-bold uppercase no-text-stroke absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 leading-5 sm:leading-normal text-2xl sm:text-3xl md:text-4xl z-20 tracking-normal text-emerald-500">
             Send a Message
           </span>
         </h2>
         <ContactForm />
         <SocialIcons className="justify-center mt-20" />
-        <div className="flex space-x-4 justify-center mt-8 text-sm text-emerald-500">
+        <div
+          data-aos="zoom-in"
+          className="flex flex-col items-center sm:flex-row gap-2 space-x-4 justify-center mt-8 text-sm text-emerald-500"
+        >
           <div>
-            <a className="hover:opacity-80" href="tel:+639912033418">
+            <a
+              className="hover:opacity-80 underline underline-offset-4"
+              href="tel:+639912033418"
+            >
               +63 991 203 3418
             </a>
           </div>
-          <Separator className="h-6 bg-emerald-800" orientation="vertical" />
+          <Separator
+            className="hidden sm:block h-6 bg-emerald-800"
+            orientation="vertical"
+          />
           <div>
             <a
-              className="hover:opacity-80"
+              className="hover:opacity-80 underline underline-offset-4"
               href="mailto:makeschange96@gmail.com"
             >
               makeschange96@gmail.com
             </a>
           </div>
-          <Separator className="h-6 bg-emerald-800" orientation="vertical" />
+          <Separator
+            className="hidden sm:block h-6 bg-emerald-800"
+            orientation="vertical"
+          />
           <div>
             <a
-              className="hover:opacity-80 flex items-center gap-1"
+              className="hover:opacity-80 flex items-center gap-1 underline underline-offset-4"
               href="/pdf/Arnulfo_Caceres.pdf"
               download="Arnulfo Caceres CV.pdf"
               target="_blank"

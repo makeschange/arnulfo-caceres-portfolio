@@ -11,7 +11,10 @@ import {
 const FeaturedDialog = () => {
   return (
     <Dialog>
-      <DialogTrigger className="h-10 px-6 rounded hover:shadow-lg  hover:shadow-emerald-400 bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-500 text-emaral-300">
+      <DialogTrigger
+        data-aos="fade-up"
+        className="h-10 px-4 text-xs sm:text-sm sm:px-6  py-2 rounded hover:shadow-lg  hover:shadow-emerald-400 bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-500 text-emarald-300"
+      >
         Show More
       </DialogTrigger>
       <DialogContent className="bg-emerald-500 border-emerald-800">

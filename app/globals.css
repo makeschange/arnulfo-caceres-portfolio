@@ -88,3 +88,17 @@
     -webkit-text-stroke: 0;
   }
 }
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  background-color: black;
+  transition: transform 0.2s, opacity 0.2s;
+}
+

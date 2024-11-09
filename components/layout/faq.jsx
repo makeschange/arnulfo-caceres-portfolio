@@ -37,26 +37,32 @@ const Faq = () => {
   return (
     <div
       id="about"
-      className="px-2 py-24 bg-bg-globe  bg-bottom w-full h-full bg-cover overflow-hidden"
+      className="px-4 py-24 bg-bg-globe  bg-bottom w-full h-full bg-cover overflow-hidden"
     >
       <div className="wrapper">
         <div>
-          <h2 className="text-center mb-8 font-poppins text-stroke-black font-bold uppercase no-text-stroke  text-4xl z-20 tracking-normal text-emerald-500">
+          <h2
+            data-aos="fade-down"
+            className="text-center mb-8 font-poppins text-stroke-black font-bold uppercase no-text-stroke text-xl sm:text-3xl md:text-4xl z-20 tracking-normal text-emerald-500"
+          >
             Frequently Asked Questions
           </h2>
-          <div className="w-[70%] mx-auto">
+          <div className="w-full sm:w-[70%] mx-auto">
             <Accordion type="single" collapsible className="">
-              {AccordionDataProps.map((item) => {
+              {AccordionDataProps.map((item, index) => {
+                const animationStyle =
+                  index % 2 === 0 ? "fade-left" : "fade-right";
                 return (
                   <AccordionItem
+                    data-aos={animationStyle}
                     key={item.id}
                     value={item.id}
                     className="border-emerald-800 border-dotted mb-6"
                   >
-                    <AccordionTrigger className="text-lg">
+                    <AccordionTrigger className="text-md lg:text-lg">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-lg bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-500 p-4 rounded-lg">
+                    <AccordionContent className="text-sm lg:text-lg bg-gradient-to-r from-emerald-800 via-emerald-900 to-emerald-800 p-4 rounded-lg">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

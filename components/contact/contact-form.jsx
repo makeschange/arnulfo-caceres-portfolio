@@ -42,8 +42,9 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form
+        data-aos="slide-up"
         // onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-6 max-w-md w-full bg-gradient-to-r from-emerald-800 via-emerald-900 to-emerald-800 p-8 rounded-xl mt-8 mx-auto"
+        className="space-y-4 sm:space-y-6 max-w-md w-full bg-gradient-to-r from-emerald-800 via-emerald-900 to-emerald-800 p-4 sm:p-8 rounded-xl mt-8 mx-auto"
       >
         <FormField
           control={form.control}
@@ -88,7 +89,7 @@ const ContactForm = () => {
         <Button
           variant="custom"
           size="lg"
-          className="w-full uppercase font-bold text-lg"
+          className="w-full uppercase font-bold text-md sm:text-lg"
           type="button"
           onClick={onSubmitForm}
         >

@@ -46,7 +46,11 @@ const FeaturedCarousel = () => {
       <CarouselContent>
         {FeaturedProjectsData.map((item) => {
           return (
-            <CarouselItem key={item.id} className="md:basis-1/3 p-8">
+            <CarouselItem
+              data-aos="zoom-in"
+              key={item.id}
+              className="bases-100% sm:basis-1/2 lg:basis-1/3 p-4 md:p-8"
+            >
               <FeaturedCard {...item} />
             </CarouselItem>
           );

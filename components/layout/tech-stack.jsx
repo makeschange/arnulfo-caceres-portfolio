@@ -26,27 +26,31 @@ const TechData = [
 
 const TechStack = () => {
   return (
-    <div className="px-2 py-24 border-dotted border-t border-t-emerald-800">
+    <div className="py-24 pb-0 sm:py-24 border-dotted border-t border-t-emerald-800">
       <div className="wrapper">
         <div>
-          <h2 className="text-stroke-green relative text-center text-9xl font-bebas_neue text-black tracking-widest">
+          <h2
+            data-aos="zoom-in"
+            className="text-stroke-green relative text-center text-7xl sm:text-8xl md:text-9xl font-bebas_neue text-black tracking-widest"
+          >
             Tech Stack
-            <span className="font-poppins text-stroke-black font-bold uppercase no-text-stroke absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-4xl z-20 tracking-normal text-emerald-500">
+            <span className="w-full leading-5 sm:leading-normal text-2xl sm:text-3xl md:text-4xl font-poppins text-stroke-black font-bold uppercase no-text-stroke absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-20 tracking-normal text-emerald-500">
               Skills & Expertise
             </span>
           </h2>
           <Marquee
             pauseOnHover
             pauseOnClick
-            className="bg-bg-net bg-[center_bottom_-3rem] w-full h-full bg-cover  mt-20 min-h-80 rounded-lg border border-dotted border-emerald-800"
+            className="bg-bg-net bg-[center_bottom_-3rem] w-full h-full bg-cover mt-10 sm:mt-20 min-h-40 sm:min-h-80 rounded-lg border border-dotted border-emerald-800"
           >
             {TechData.map((item) => {
               return (
                 <Image
+                  data-aos="zoom-in"
                   key={item.id}
                   src={item.src}
                   alt={item.title}
-                  className="mx-4 border-2 border-dotted border-emerald-800 rounded-full shadow-lg shadow-emerald-800"
+                  className="mx-2 sm:mx-4 border-2 border-dotted border-emerald-800 rounded-full shadow-lg shadow-emerald-800 max-w-14 sm:max-w-20 lg:max-w-full"
                   title={item.title}
                 />
               );

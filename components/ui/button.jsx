@@ -20,12 +20,12 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         custom:
-          "hover:shadow-lg  hover:shadow-emerald-400 bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-500 text-emaral-300",
+          "hover:shadow-lg sm:text-sm text-xs hover:shadow-emerald-400 bg-gradient-to-r from-emerald-500 via-emerald-700 to-emerald-500 text-emerald-300",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        default: "h-9 px-2 sm:px-4 py-2",
+        sm: "h-8 rounded-md  px-2 sm:px-3 text-xs",
+        lg: "h-10 rounded-md px-6 sm:px-8",
         icon: "h-9 w-9",
       },
     },

@@ -7,18 +7,22 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="px-2 border-dotted border border-emerald-800 sticky top-0 z-50 bg-gradient-to-r from-black via-emerald-950 to-black bg-no-repeat bg-cover">
+    <header className="px-4 w-full border-dotted border border-emerald-800 sticky top-0 z-50 bg-gradient-to-r from-black via-emerald-950 to-black bg-no-repeat bg-cover">
       <div className="wrapper">
         <div className="py-2 flex justify-between">
           <Link href="/">
             <Image
-              className="max-w-[150px]"
+              data-aos="zoom-in"
+              className="max-w-24 sm:max-w-[150px] "
               src={Logo}
               alt="main logo of the portfolio"
             />
           </Link>
           <div className="flex gap-x-4 items-center">
-            <ul className="flex items-center gap-x-4 mr-8">
+            <ul
+              data-aos="zoom-in"
+              className=" hidden sm:flex items-center gap-x-4 mr-8"
+            >
               <li>
                 <Link
                   className="text-emerald-500 hover:opacity-80 text-sm "
@@ -37,7 +41,13 @@ const Header = () => {
               </li>
             </ul>
             <SocialIcons />
-            <Button size="sm" variant="custom" asChild>
+            <Button
+              className="hidden sm:inline-flex "
+              data-aos="zoom-in"
+              size="sm"
+              variant="custom"
+              asChild
+            >
               <Link href="#myproject"> Show Projects</Link>
             </Button>
           </div>

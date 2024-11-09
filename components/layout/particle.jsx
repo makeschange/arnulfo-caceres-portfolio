@@ -539,6 +539,7 @@ const ParticlesLayout = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
+        className="w-full"
       />
     );
   }
