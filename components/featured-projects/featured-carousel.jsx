@@ -7,11 +7,19 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import FeaturedCard from "@/components/featured-projects/featured-card";
+import FeaturedImage0 from "@/public/featured/f-takime.jpg";
 import FeaturedImage1 from "@/public/featured/f-proweaver.jpg";
 import FeaturedImage2 from "@/public/featured/f-portfolio.jpg";
 import FeaturedImage3 from "@/public/featured/f-taki-pet-shop.jpg";
 
 const FeaturedProjectsData = [
+  {
+    id: "f0",
+    title: "Takime",
+    href: "https://takime.vercel.app/",
+    src: FeaturedImage0,
+    hrefLabel: "Visit Now",
+  },
   {
     id: "f1",
     title: "Proweaver, Inc.",
