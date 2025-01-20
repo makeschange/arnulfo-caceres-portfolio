@@ -12,17 +12,13 @@ const Header = () => {
         <div className="py-2 flex justify-between">
           <Link href="/">
             <Image
-              data-aos="zoom-in"
               className="max-w-24 sm:max-w-[150px] "
               src={Logo}
               alt="main logo of the portfolio"
             />
           </Link>
           <div className="flex gap-x-4 items-center">
-            <ul
-              data-aos="zoom-in"
-              className=" hidden sm:flex items-center gap-x-4 mr-8"
-            >
+            <ul className=" hidden sm:flex items-center gap-x-4 mr-8">
               <li>
                 <Link
                   className="text-emerald-500 hover:opacity-80 text-sm "
@@ -43,7 +39,6 @@ const Header = () => {
             <SocialIcons />
             <Button
               className="hidden sm:inline-flex "
-              data-aos="zoom-in"
               size="sm"
               variant="custom"
               asChild

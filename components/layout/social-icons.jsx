@@ -1,13 +1,14 @@
 import React from "react";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { Github } from "lucide-react";
 import ButtonLink from "../helper/button-link";
 
 const SocialIcons = ({ className }) => {
   return (
-    <div
-      data-aos="zoom-in"
-      className={`flex gap-x-4 items-center ${className}`}
-    >
+    <div className={`flex gap-x-3 items-center ${className}`}>
+      <ButtonLink href="https://github.com/makeschange">
+        <Github className="h-5 w-5 text-emerald-500 hover:opacity-80" />
+      </ButtonLink>
       <ButtonLink href="https://www.facebook.com/arnulfocaceres07">
         <FaFacebookF className="h-5 w-5 text-emerald-500 hover:opacity-80 " />
       </ButtonLink>
