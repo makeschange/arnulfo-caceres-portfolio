@@ -9,9 +9,6 @@ const SocialIcons = ({ className }) => {
       <ButtonLink href="https://github.com/makeschange">
         <Github className="h-5 w-5 text-emerald-500 hover:opacity-80" />
       </ButtonLink>
-      <ButtonLink href="https://www.facebook.com/arnulfocaceres07">
-        <FaFacebookF className="h-5 w-5 text-emerald-500 hover:opacity-80 " />
-      </ButtonLink>
       <ButtonLink href="https://www.linkedin.com/in/arnulfo-s-caceres-web-developer-01218122a/">
         <FaLinkedinIn className="h-5 w-5 text-emerald-500 hover:opacity-80" />
       </ButtonLink>

@@ -42,9 +42,9 @@ const ContactUs = () => {
           <div>
             <a
               className="hover:opacity-80 underline underline-offset-4"
-              href="mailto:makeschange96@gmail.com"
+              href="mailto:arnulfocaceres07@gmail.com"
             >
-              makeschange96@gmail.com
+              arnulfocaceres07@gmail.com
             </a>
           </div>
           <Separator
