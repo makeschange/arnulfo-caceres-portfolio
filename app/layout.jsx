@@ -28,14 +28,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${bebas_neue.variable} ${poppins.variable} bg-gradient-to-r from-black via-emerald-950 to-black bg-no-repeat bg-cover w-full `}
+        className={`${bebas_neue.variable} ${poppins.variable} bg-[#0B1120] text-slate-100 min-h-screen w-full relative overflow-x-hidden antialiased`}
       >
         <CustomCursor />
         <ParticlesLayout />
         <Header />
-        {children}
+        <main className="w-full relative z-10">{children}</main>
         <Toaster />
       </body>
     </html>

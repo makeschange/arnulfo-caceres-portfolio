@@ -1,83 +1,82 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const CustomCursor = () => {
-  const circlesRef = useRef([]);
-  const colors = [
-    "#8de284",
-    "#72d964",
-    "#5bd249",
-    "#43cb33",
-    "#34bf2b",
-    "#2ab124",
-    "#1fa31d",
-    "#179517",
-    "#118611",
-    "#0d770d",
-    "#0a680a",
-    "#085b08",
-    "#064e06",
-    "#054205",
-    "#043804",
-    "#032d03",
-    "#022402",
-  ];
+export default function CustomCursor() {
+  const dotRef = useRef(null);
+  const ringRef = useRef(null);
+  const [hidden, setHidden] = useState(true);
+  const [clicked, setClicked] = useState(false);
+  const [linkHovered, setLinkHovered] = useState(false);
 
   useEffect(() => {
-    const coords = { x: 0, y: 0 };
-    const circles = circlesRef.current;
+    // Hide custom cursor on touch devices
+    if (typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches) {
+      return;
+    }
 
-    circles.forEach((circle, index) => {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
+    setHidden(false);
 
-    const handleMouseMove = (e) => {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
+    const onMouseMove = (e) => {
+      const { clientX: x, clientY: y } = e;
+      
+      if (dotRef.current && ringRef.current) {
+        dotRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        // Add a slight lag to the outer ring for a trailing effect
+        ringRef.current.style.transform = `translate3d(${x - 16}px, ${y - 16}px, 0)`;
+      }
     };
 
-    const animateCircles = () => {
-      let x = coords.x;
-      let y = coords.y;
+    const onMouseDown = () => setClicked(true);
+    const onMouseUp = () => setClicked(false);
 
-      circles.forEach((circle, index) => {
-        circle.style.left = `${x - 12}px`;
-        circle.style.top = `${y - 12}px`;
-        circle.style.scale = (circles.length - index) / circles.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
+    const handleLinkHoverEvents = () => {
+      document.querySelectorAll("a, button, [role='button'], input, textarea, select").forEach((el) => {
+        el.addEventListener("mouseenter", () => setLinkHovered(true));
+        el.addEventListener("mouseleave", () => setLinkHovered(false));
       });
-
-      requestAnimationFrame(animateCircles);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    animateCircles();
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mousedown", onMouseDown);
+    window.addEventListener("mouseup", onMouseUp);
+    
+    // Add links listeners after DOM loads
+    handleLinkHoverEvents();
+    
+    // Re-bind link hover events periodically for dynamically rendered elements
+    const interval = setInterval(handleLinkHoverEvents, 1000);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mousedown", onMouseDown);
+      window.removeEventListener("mouseup", onMouseUp);
+      clearInterval(interval);
     };
-  }, [colors]);
+  }, []);
+
+  if (hidden) return null;
 
   return (
     <>
-      {Array.from({ length: 22 }).map((_, index) => (
-        <div
-          key={index}
-          className="circle"
-          ref={(el) => (circlesRef.current[index] = el)}
-        ></div>
-      ))}
+      {/* Inner Dot */}
+      <div
+        ref={dotRef}
+        className={`fixed top-0 left-0 w-2 h-2 rounded-full bg-cyan-400 pointer-events-none z-[9999999] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 ${
+          clicked ? "scale-50 bg-violet-400" : ""
+        } ${linkHovered ? "scale-150 bg-cyan-300" : ""}`}
+      />
+      {/* Outer Ring */}
+      <div
+        ref={ringRef}
+        className={`fixed top-0 left-0 w-8 h-8 rounded-full border border-cyan-400/50 pointer-events-none z-[9999998] transition-all duration-300 ease-out ${
+          clicked ? "scale-75 border-violet-400/80 bg-violet-500/10" : ""
+        } ${
+          linkHovered
+            ? "scale-150 border-cyan-300 bg-cyan-400/10"
+            : ""
+        }`}
+      />
     </>
   );
-};
-
-export default CustomCursor;
+}
