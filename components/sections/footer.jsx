@@ -43,9 +43,6 @@ export default function Footer() {
               onClick={handleScrollToTop}
               className="flex items-center gap-2 group font-semibold text-lg text-white mb-2"
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center font-bold text-xs text-black shadow-md shadow-blue-500/10">
-                AC
-              </div>
               <span className="font-medium tracking-wide">Arnulfo Caceres</span>
             </a>
             <p className="text-xs text-slate-500 max-w-xs leading-relaxed">
@@ -55,7 +52,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-wrap justify-center gap-6 text-xs text-slate-400 font-semibold uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs text-slate-400 font-semibold uppercase tracking-wider">
             <a
               href="#about"
               onClick={(e) => handleNavClick(e, "#about")}

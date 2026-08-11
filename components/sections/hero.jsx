@@ -67,7 +67,7 @@ export default function Hero() {
           </h1>
 
           {/* Typing Title */}
-          <div className="h-10 sm:h-12 text-2xl sm:text-3xl font-semibold text-slate-300 mb-3">
+          <div className=" text-2xl sm:text-3xl font-semibold text-slate-300 mb-4 leading-tight">
             I am a{" "}
             <span
               ref={typedEl}
@@ -90,7 +90,7 @@ export default function Hero() {
             <a
               href="#projects"
               onClick={handleScrollToProjects}
-              className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold tracking-wider text-black bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="group relative inline-flex items-center w-full justify-center gap-2 px-6 py-3.5 text-sm font-semibold tracking-wider text-black bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               View My Work
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -99,7 +99,7 @@ export default function Hero() {
             <a
               href="/pdf/Arnulfo-Caceres.pdf"
               download="Arnulfo_Caceres_Resume.pdf"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold tracking-wider text-slate-300 bg-slate-900 border border-slate-800 rounded-xl hover:bg-slate-800 hover:text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 text-sm font-semibold tracking-wider text-slate-300 bg-slate-900 border border-slate-800 rounded-xl hover:bg-slate-800 hover:text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             >
               Download Resume
               <Download className="w-4 h-4" />
@@ -141,7 +141,7 @@ export default function Hero() {
           data-aos="fade-left"
         >
           {/* Main Visual container */}
-          <div className="relative w-full max-w-md aspect-square lg:aspect-auto lg:h-[480px] rounded-2xl border border-slate-800/80 bg-[#111827]/70 backdrop-blur-xl p-5 shadow-2xl overflow-hidden group">
+          <div className="relative w-full max-w-md aspect-square lg:aspect-auto rounded-2xl border border-slate-800/80 bg-[#111827]/70 backdrop-blur-xl p-5 shadow-2xl overflow-hidden group">
             {/* Top Bar for Code Window */}
             <div className="flex items-center justify-between pb-4 border-b border-slate-800/80 mb-4">
               <div className="flex items-center gap-2">
@@ -157,7 +157,7 @@ export default function Hero() {
             </div>
 
             {/* Code Content */}
-            <div className="font-mono text-xs sm:text-sm text-slate-400 space-y-2 select-none overflow-y-auto max-h-[280px] lg:max-h-[360px] scrollbar-thin scrollbar-thumb-slate-800">
+            <div className="font-mono text-xs sm:text-sm text-slate-400 space-y-2 select-none overflow-y-auto  scrollbar-thin scrollbar-thumb-slate-800">
               <p className="text-slate-500">
                 {"// Personal developer profile configuration"}
               </p>

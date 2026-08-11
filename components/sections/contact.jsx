@@ -92,7 +92,7 @@ export default function Contact() {
               reply within 24 hours.
             </p>
 
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 md:gap-4 md:grid-cols-2">
               {/* List items */}
               <div className="space-y-4">
                 {/* Email */}
@@ -131,10 +131,10 @@ export default function Contact() {
 
               {/* Socials & Resume Link */}
               <div>
-                <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-4">
+                <div className="text-xs text-slate-500 font-semibold md:text-left text-center uppercase tracking-wider mb-6 md:mb-4">
                   Social Accounts & Resume
                 </div>
-                <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex flex-wrap gap-4 md:justify-start justify-center items-center">
                   <a
                     href="https://www.linkedin.com/in/arnulfo-caceres-01218122a/"
                     target="_blank"
